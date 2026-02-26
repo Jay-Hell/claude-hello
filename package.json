@@ -1,0 +1,21 @@
+{
+  "name": "claude-hello",
+  "version": "1.0.0",
+  "type": "module",
+  "bin": {
+    "claude-hello": "./dist/index.js"
+  },
+  "scripts": {
+    "dev": "tsx --env-file=.env src/index.ts",
+    "build": "tsup src/index.ts --format esm --outDir dist",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.36.3"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.3"
+  }
+}
